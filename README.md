@@ -12,7 +12,7 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 
 ## Prerequisites
-- A workspace containing contours exported from the cvi42 software, the file extension should be .cvi42wsx.
+- A workspace containing contours exported from the cvi42 software, the file extension should be .cvi42wsx
 -
 
 
@@ -20,3 +20,9 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 
 ## Usage
+
+
+## Demo
+A demonstration workspace, demo.cvi42wsx, is included with this tool. The demo workspace can be found in the folder demo_data.
+
+After installation, run the demonstration:
