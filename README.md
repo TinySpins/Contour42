@@ -1,4 +1,4 @@
-# Overview
+## Overview
 This is a Python tool to extract contours from exported Circle cvi42 workspaces.
 
 The tool currently supports up to cvi42 software version 5.13.
