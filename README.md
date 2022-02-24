@@ -1,5 +1,5 @@
 # Contour42
-Extract contours created using [Circle cvi42 CMR software](https://www.circlecvi.com/).
+Extract contours created using the [Circle cvi42 CMR software](https://www.circlecvi.com/).
 
 
 ## Overview
@@ -13,10 +13,16 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 ## Prerequisites
 - A workspace containing contours exported from the cvi42 software, the file extension should be .cvi42wsx
--
+- Python 3
 
 
 ## Installation
+
+### Install Python
+
+### Install required packages
+
+### Install the tool
 
 
 ## Usage
