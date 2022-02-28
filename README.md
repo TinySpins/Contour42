@@ -12,7 +12,7 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 
 ### Prerequisites
-- A workspace containing contours exported from the cvi42 software, the file extension should be .cvi42wsx
+- An exported workspace with file extension .cvi42wsx
 - Python 3
 
 
