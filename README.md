@@ -1,5 +1,5 @@
 ## Contour42
-Extract contours created using the [Circle cvi42 CMR software](https://www.circlecvi.com/)
+Extract contours created using the [Circle cvi42 CMR software](https://www.circlecvi.com/).
 
 
 ### Overview
