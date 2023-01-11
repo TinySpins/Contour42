@@ -16,18 +16,11 @@ The tool currently supports up to Circle cvi42 software version 5.13
 - Matlab (tested with Matlab R2020b and R2022b)
 - Python 3 (tested with Python 3.7.7)
 
-
-### Installation
-
-#### Install Python
-
-#### Install required packages
-
-#### Install the tool
+#### Required Python packages
 
 
 ### Usage
-### Normal use
+#### Normal use
 Place the 'Contour42' project directory in you Matlab path, and open the `contour42.m` file in Matlab. Run the script.
 
 When prompted by the GUI, select a main working directory containing the following subfolders (adhere strictly to the naming scheme):
@@ -36,7 +29,7 @@ When prompted by the GUI, select a main working directory containing the followi
 
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.
 
-### Only Python component (.xml parser)
+#### Only Python component (.xml parser)
 If needed, the Python component can be run as a standalone script to extract contours from one Circle cvi42 workspace. This will produce a .mat file for each slice in the workspace with a contour, in the designated output folder. The naming convention for these files are the Dicom UID of the respective slices/images, which can be found in the Dicom headers of the corresponding images/slices.
 
 Open a new terminal and navigate to the 'parse_cvi_xml' subdirectory in the main 'Contour42' project directory using `cd path/to/dir`. This folder contains the standalone Python component of the tool: `parse_cvi42_xml.py`.
