@@ -1,4 +1,4 @@
-% Contour42.m
+% contour42.m
 
 % Tool to extract contours created using the cvi42 software for cardiac magnetic resonance (CMR) imaging analysis, produced by Circle.
 % The tool uses exported cvi42 workspaces to extract the contours into .mat format.
