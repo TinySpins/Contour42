@@ -28,11 +28,11 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 ### Usage
 ### Normal use
-Place the 'Contour42' project directory in you Matlab path, and open the `contour42.m` file in Matlab.
+Place the 'Contour42' project directory in you Matlab path, and open the `contour42.m` file in Matlab. Run the script.
 
 When prompted by the GUI, select a main working directory containing the following subfolders (adhere strictly to the naming scheme):
-- workspaces
-- dicom
+- workspaces (directory containing the cvi42 workspaces: workspace_1.cvi42wsx, workspace_2.cvi42wsx ect.)
+- dicom (directory containing ?
 
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.
 
