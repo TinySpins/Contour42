@@ -30,9 +30,10 @@ The tool currently supports up to Circle cvi42 software version 5.13
 **Normal use**
 
 **Only Python component (.xml parser)**
+
 If needed, the Python component can be run as a standalone script to extract contours from one Circle cvi42 workspace.
 
-Open a new terminal and navigate to the 'parse_cvi_xml' subdirectory in the main 'Contour42' project directory using 'cd path/to/dir'.
+Open a new terminal and navigate to the 'parse_cvi_xml' subdirectory in the main 'Contour42' project directory using `cd path/to/dir`.
 
 
 ```terminl
