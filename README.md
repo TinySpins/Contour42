@@ -18,13 +18,15 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 #### Required Python packages
 
+#### How to export a Circle cvi42 workspace
+
 
 ### Usage
 #### Normal use
 Place the 'Contour42' project directory in you Matlab path, and open the `contour42.m` file in Matlab. Run the script.
 
 When prompted by the GUI, select a main working directory containing the following subfolders (adhere strictly to the naming scheme):
-- workspaces (directory containing the cvi42 workspaces: workspace_1.cvi42wsx, workspace_2.cvi42wsx ect.)
+- workspaces (directory containing your workspaces)
 - dicom (directory containing ?
 
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.

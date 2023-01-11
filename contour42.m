@@ -48,7 +48,7 @@ end
 % Run xml parser (loop over workspaces) - have python generate a file to tell matlab that it has finished (matlab runs infinite while loop to detect the file)
 % The selection of workspace needs to automated (changed per loop
 % iteration) in the below code!!
-for % loop over ID folders in workspace folder
+%for % loop over ID folders in workspace folder
     run_command = ['python ''parse_cvi_xml/parse_cvi42_xml.py'' '''...
                     path.full '/workspaces/ID_1.cvi42wsx'' '''...
                     path.full '/temp'''];
@@ -60,7 +60,7 @@ for % loop over ID folders in workspace folder
         pause(1) 
     end
     disp('test delay')
-end
+%end
 
 % Run matlab sorting into a structure (Dicom headers needed for this?)
 
