@@ -18,16 +18,11 @@
 %  │
 %  └── dicom
 %      ├── ID_1
-%      │      ├── Series_1
-%      │      ├── Series_2
-%      │      └── Series_N
+%      │      ├── ID_1
+%      │      ├── ID_1
+%      │      └── ID_...
 %      ├── ID_2
-%      │      ├── Series_1
-%      │      ├── Series_2
-%      │      └── Series_N
 %      └── ID_N
-%             ├── ...
-%             ...
 %
 % There must be the same number of ID/patient folders in the workspaces and dicom folders.
 

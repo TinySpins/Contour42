@@ -12,14 +12,15 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 
 ### Prerequisites
-- An exported Circle cvi42 workspace with file extension .cvi42wsx
+- An exported Circle cvi42 workspace XML with file extension .cvi42wsx
 - Matlab (tested with Matlab R2020b and R2022b)
 - Python 3 (tested with Python 3.7.7)
 
 #### Required Python packages
 
-#### How to export a Circle cvi42 workspace
-
+#### How to export a Circle cvi42 XML workspace
+Open cvi42. Open a study. If there are no contours defined for any of the series in the study, draw some contours, then save the workspace.
+To export the workspace as XML, click on 'Workspace' in the top menu, select 'Export Workspace' in the drop down menu. Fill in a proper name for the workspace. In the 'Save as type:' field, select `Cvi42 XML Workspace (*.cvi42wsx)`
 
 ### Usage
 #### Normal use
@@ -32,7 +33,7 @@ When prompted by the GUI, select a main working directory containing the followi
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.
 
 #### Only Python component (.xml parser)
-If needed, the Python component can be run as a standalone script to extract contours from one Circle cvi42 workspace. This will produce a .mat file for each slice in the workspace with a contour, in the designated output folder. The naming convention for these files are the Dicom UID of the respective slices/images, which can be found in the Dicom headers of the corresponding images/slices.
+If needed, the Python component can be run as a standalone script to extract contours from one Circle cvi42 XML workspace. This will produce a .mat file for each slice in the workspace with a contour, in the designated output folder. The naming convention for these files are the Dicom UID of the respective slices/images, which can be found in the Dicom headers of the corresponding images/slices.
 
 Open a new terminal and navigate to the 'parse_cvi_xml' subdirectory in the main 'Contour42' project directory using `cd path/to/dir`. This folder contains the standalone Python component of the tool: `parse_cvi42_xml.py`.
 
