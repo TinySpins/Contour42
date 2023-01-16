@@ -10,7 +10,7 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 ### Terms of use
 The code is provided under the GNU General Public License. Please review the included license file before altering and distributing the code.
-Note that the Python component of this tool is a fork from another project, and is provided under the Apache-2.0 License. The Python component and its corresponding license file can be found in the 'parse_cvi_xml' directory.
+Note that the Python component of this tool is a fork of another project, and is provided under the Apache-2.0 License. The Python component and its corresponding license file can be found in the 'parse_cvi_xml' directory.
 
 
 ### Prerequisites
