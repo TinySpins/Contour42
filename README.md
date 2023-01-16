@@ -9,6 +9,8 @@ The tool currently supports up to Circle cvi42 software version 5.13
 
 
 ### Terms of use
+The code is provided under the GNU General Public License. Please review the included license file before altering and distributing the code.
+Note that the Python component of this tool is a fork from another project provided under the Apache-2.0 License. The Python component and its corresponding license file can be found in the 'parse_cvi_xml' directory.
 
 
 ### Prerequisites
@@ -32,8 +34,6 @@ When prompted by the GUI, select a main working directory containing the followi
 - dicom (directory containing ?
 
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.
-
-
 #### Only Python component (.xml parser)
 If needed, the Python component can be run as a standalone script to extract contours from one Circle cvi42 XML workspace. This will produce a .mat file for each slice in the workspace with a contour, in the designated output folder. The naming convention for these files are the Dicom UID of the respective slices/images, which can be found in the Dicom headers of the corresponding images/slices.
 
