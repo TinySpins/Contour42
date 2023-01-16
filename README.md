@@ -29,9 +29,9 @@ To export the workspace as XML, click on 'Workspace' in the top menu, select 'Ex
 #### Normal use
 Place the 'Contour42' project directory in you Matlab path, and open the `contour42.m` file in Matlab. Run the script.
 
-When prompted by the GUI, select a main working directory containing the following subfolders (adhere strictly to the naming scheme):
-- workspaces (directory containing your workspaces)
-- dicom (directory containing ?
+When prompted by the GUI, select a main working directory containing the following subdirectories (adhere strictly to the naming scheme):
+- workspaces (directory containing your workspaces, e.g. study_1, study_2...)
+- dicom (directory containing subfolders study_1, study_2..., with subdirectories for each contoured series)
 
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.
 #### Only Python component (.xml parser)
