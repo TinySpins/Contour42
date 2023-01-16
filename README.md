@@ -31,7 +31,9 @@ Place the 'Contour42' project directory in you Matlab path, and open the `contou
 
 When prompted by the GUI, select a main working directory containing the following subdirectories (adhere strictly to the naming scheme):
 - workspaces (directory containing your workspaces, e.g. study_1, study_2...)
-- dicom (directory containing subfolders study_1, study_2..., with subdirectories for each contoured series)
+- dicom (directory containing subdirectories, e.g.: study_1, study_2... Each subdirectory contains further subdirectories for each series for which we want to extract contours)
+
+Note that the tool uses the Dicom UID to match the slices for all entries in the 'dicom' folder to Dicom UID's in the workspace XML files. Hence, there will only be an output contour for a particular slice, if its Dicom UID can be found in both the XML workspace and 'dicom' files.
 
 Any produced .mat files containing cvi42 contours will be saved in an automatically created 'contours' directory in the main working directory.
 #### Only Python component (.xml parser)
