@@ -53,6 +53,21 @@ if(~isdeployed)
   cd(fileparts(which(mfilename)))
 end
 
+% Scan the workspaces directory for XML (.cvi42wsx) workspaces
+
+% Verify the corresponding cases exist in the dicom directory
+
+% Throw error if they are not there
+
+% 
+% sort paths
+% path = GetPath
+% structure = genpath(path.full)
+% newStr = split(structure,':')
+% k = strfind(newStr,'/')
+% depth = length(k{1})
+
+
 % Run xml parser (loop over workspaces) - have python generate a file to tell matlab that it has finished (matlab runs infinite while loop to detect the file)
 % The selection of workspace needs to automated (changed per loop
 % iteration) in the below code!!
