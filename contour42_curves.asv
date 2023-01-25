@@ -21,7 +21,7 @@ switch mode
         % Load dicom data
 
         % Define AHA segmentation and territories from myocardial contour
-        % make a sub function for calculating these masks
+        % make a sub function for calculating the 
 
         % Extract raw SI curves for each sub-contour
 
