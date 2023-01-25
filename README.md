@@ -25,6 +25,7 @@ Note that the Python component of this tool is a fork of another project, and is
 #### How to export a Circle cvi42 XML workspace
 Open cvi42. Open a study. If there are no contours defined for any of the series in the study, draw some contours, then save the workspace.
 To export the workspace as XML, click on 'Workspace' in the top menu, select 'Export Workspace' in the drop down menu. Fill in a proper name for the workspace. In the 'Save as type:' field, select `Cvi42 XML Workspace (*.cvi42wsx)`. Click 'Save'.
+Note that it is important to export workspaces in the `.cvi42wsx` format. The `.cvi42ws` format is in binary, and will not work.
 
 
 ### Usage

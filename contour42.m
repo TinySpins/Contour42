@@ -1,9 +1,18 @@
 % contour42.m
 
-% Tool to extract contours created using the cvi42 software for cardiac magnetic resonance (CMR) imaging analysis, produced by Circle.
-% The tool uses exported cvi42 workspaces to extract the contours into .mat format.
+% Tool to extract contours created using the cvi42 software for cardiac 
+% magnetic resonance (CMR) imaging analysis, produced by Circle.
+% The tool uses exported cvi42 workspaces to extract the contours into 
+% .mat format.
 
-% The script expects a folder stucture containing the exported cvi42 workspaces and dicom image data that follows the below pattern:
+% After running this script the following two scripts provide additional 
+% functionality ans must be called independently:
+%  - contour42_view.m enables viewing of the generated contour masks.
+%  - contour42_curves.m can generate curves from dynamic data (such as 
+%    pefusion of flow) using the generated contour masks.
+
+% The script expects a folder stucture containing the exported cvi42 
+% workspaces and dicom image data that follows the below pattern:
 %
 % Main folder
 %  │
@@ -29,7 +38,8 @@
 %             ├── ...
 %             ...
 %
-% There must be the same number of ID/patient folders in the workspaces and dicom folders.
+% There must be the same number of ID/patient folders in the workspaces 
+% and dicom folders.
 
 % The script uses the following naming conventions:
 % Output folder name = Contours/'Main folder'
@@ -42,54 +52,37 @@ path = GetPath;
 
 % Create output folder
 output_folder = [path.full '/contours'];
-if ~exist(output_folder,'dir') mkdir(output_folder); end
+if ~exist(output_folder,'dir'); mkdir(output_folder); end
 
 % Create temp folder
 temp_folder = [path.full '/temp'];
-if ~exist(temp_folder,'dir') mkdir(temp_folder); end
-
-% Go to script directory to execute python component
-if(~isdeployed)
-  cd(fileparts(which(mfilename)))
-end
+if ~exist(temp_folder,'dir'); mkdir(temp_folder); end
 
 % Scan the workspaces directory for XML (.cvi42wsx) workspaces
+xml_list = dir([path.full '/workspaces/*.cvi42wsx']);
+xml_list = natsortfiles(xml_list); % sort them according to number
+xml_names = string({xml_list.name});
 
-% Verify the corresponding cases exist in the dicom directory
+% Scan the dicom directory for corresponding study folders
+study_list = dir([path.full '/dicom/ID_*']);
+study_list = natsortfiles(study_list);
+study_names = string({study_list.name});
 
-% Throw error if they are not there
+% Verify workspaces and studies match in number and naming
+if length(xml_names)~=length(study_names)
+    error('Number of workpaces and studies do not match')
+end
+inBoth = intersect(study_names,erase(xml_names,'.cvi42wsx'));
+if length(inBoth)~=length(study_names) || length(inBoth)~=length(xml_names)
+    error(['One or more studies or XML files are not paired -' ...
+        ' check if they are named correctly'])
+end
 
-% 
-% sort paths
-% path = GetPath
-% structure = genpath(path.full)
-% newStr = split(structure,':')
-% k = strfind(newStr,'/')
-% depth = length(k{1})
+% Parse cvi42 XML workspaces
+contour42_parse(path,study_names,xml_names)
 
+% Sort and organize the contours into friendly format
+contour42_organize(path,study_names)
 
-% Run xml parser (loop over workspaces) - have python generate a file to tell matlab that it has finished (matlab runs infinite while loop to detect the file)
-% The selection of workspace needs to automated (changed per loop
-% iteration) in the below code!!
-%for % loop over ID folders in workspace folder
-    run_command = ['python ''parse_cvi_xml/parse_cvi42_xml.py'' '''...
-                    path.full '/workspaces/ID_3.cvi42wsx'' '''...
-                    path.full '/temp'''];
-    system(run_command);
-    
-    % Wait for python component to finish
-    filename = [path.full '/temp/status_done.txt'];
-    while exist(filename)==0 
-        pause(1) 
-    end
-    disp('test delay')
-%end
-
-% Run matlab sorting into a structure (Dicom headers needed for this?) yes
-
-% Export sorted .mat file for each cvi42 module and delete temp files created by xml parser
-
-% more?
-
-% load('/Users/chmari/Documents/Dokumenter PC/Code/python/projects/Contour42/demo_data/1.2.840.113619.2.453.5554020.7718065.28088.1614582135.369.mat')
-% plot(contours.sarvendocardialContour(:,1),contours.sarvendocardialContour(:,2))
+% Delete the temp directory to save space
+status = rmdir(temp_folder, 's');
