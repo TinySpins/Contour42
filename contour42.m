@@ -37,9 +37,6 @@
 % There must be the same number of ID/patient folders in the workspaces 
 % and dicom folders.
 
-% The script uses the following naming conventions:
-% Output folder name = Contours/'Main folder'
-
 % House cleaning
 clear all; close all; clc;
 
