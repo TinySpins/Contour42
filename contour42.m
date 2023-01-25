@@ -16,10 +16,6 @@
 %
 % Main folder
 %  │
-%  ├── file
-%  ├── file
-%  ├── file
-%  │
 %  ├── workspaces
 %  │   ├── ID_1
 %  │   ├── ID_2
