@@ -35,7 +35,7 @@
 %             ...
 %
 % There must be the same number of ID/patient folders in the workspaces 
-% and dicom folders.
+% and dicom folders. The study folders and workspaces must be named ID_...
 % The workspace corresponding to a given study directory must have the same
 % name for sorting purposes, e.g. workspaces/ID_1.cvi42wsx and dicom/ID_1.
 

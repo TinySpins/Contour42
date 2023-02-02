@@ -102,14 +102,31 @@ function contour42_organize(path,study_names)
                     
                     try
                         current = contours.(instance).(annotation);
-                        current_mask = poly2mask(current(:,1),current(:,2),...
+                        % Handle RefPoints
+                        if contains(annotation,'Point')
+                            current_mask = current;
+                        else % Handle Masks
+                            current_mask = poly2mask(current(:,1),current(:,2),...
                                         double(info.Rows),double(info.Columns));
+                        end
+
                     catch me
-                        current_mask = zeros(double(info.Rows),double(info.Columns));
+                        % Handle RefPoints
+                        if contains(annotation,'Point')
+                            current_mask = [nan nan];
+                        else % Handle Masks
+                            current_mask = zeros(double(info.Rows),double(info.Columns));
+                        end
+                    end
+                    
+                    % Handle RefPoints
+                    if contains(annotation,'Point')
+                        mask.(annotation)(1,:,k5) = current_mask;
+                    else % Handle Masks
+                        mask.(annotation)(:,:,k5) = current_mask;
                     end
 
-                    mask.(annotation)(:,:,k5) = current_mask;
-                    
+                    clear current_mask
                 end
             end
 
