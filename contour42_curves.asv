@@ -223,8 +223,8 @@ function contour42_curves(mode)
                     for k9 = 1:data(k8).info.phases
 
                         % Global
-                        values(k9) = mean2(nonzeros(data(k8).global .* ...
-                                            squeeze(MYO(:,:,k9,:,k8))));
+                        values(k9) = mean2(nonzeros(data(k8).global.*...
+                                            squeeze(MYO(:,:,k9,:,k8)));
 
                         % Territories
 

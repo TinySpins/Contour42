@@ -14,7 +14,7 @@ path = GetPath;
 % Load the contour file
 load([path.full '/' path.folder ' [Contour Masks].mat'])
 
-% Load the Dicom series
+% Load the Dicom series (use dicomreadVolume instead!!!!)
 images = dir([dicom_path '/*.dcm']);
 images = natsortfiles(images);
 for k = 1:length(images)
