@@ -75,7 +75,10 @@ Run the script in the terminal by executing `python parse_cvi42_xml.py xml_path 
 ### Output
 #### Normal use
 - `contours/ID_*/<SeriesName>/<SeriesName> [Contour Polygons].mat`
-   sdf
+
+   File containing the raw exported contour polygons sorted in a structure by 'InstanceNumber' dicom tag. Each 'InstanceNumber_*' field contains all the contours identified for that slice/Dicom UID.
 
 
 - `contours/ID_*/<SeriesName>/<SeriesName> [Contour Masks].mat`
+
+   File containing logical masks generated from the exported contour polygons sorted in a structure . Each field in 'mask.' contains the contour masks generated for that slice/Dicom UID sorted by 'InstanceNumber' dicom tag on the third dimension.
