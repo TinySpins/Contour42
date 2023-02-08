@@ -57,8 +57,8 @@ When prompted by the GUI, select a main working directory containing the followi
              ...
 ```
 
-- workspaces (directory containing your workspaces, i.e. ID_1.cvi42wsx, ID_2.cvi42wsx...)
-- dicom (directory containing sub-directories, i.e.: ID_1, ID_2... Each sub-directory contains further sub-directories for each series for which we want to extract contours)
+- workspaces: directory containing your workspaces, i.e. ID_1.cvi42wsx, ID_2.cvi42wsx, ect.
+- dicom: directory containing sub-directories, i.e.: ID_1, ID_2, ect. Each sub-directory contains further sub-directories for each series for which we want to extract contours.
 
 Note that the tool uses the Dicom UID to match the slices for all entries in the 'dicom' directory to Dicom UID's in the workspace XML files. Hence, there will only be an output contour for a particular slice, if its Dicom UID can be found in both the XML workspace and 'dicom' directory files.
 
