@@ -75,8 +75,7 @@ Run the script in the terminal by executing `python parse_cvi42_xml.py xml_path 
 ### Output
 #### Normal use
 - `contours/ID_*/<SeriesName>/<SeriesName> [Contour Polygons].mat`
-   
    sdf
 
-   
+
 - `contours/ID_*/<SeriesName>/<SeriesName> [Contour Masks].mat`
