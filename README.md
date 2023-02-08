@@ -31,7 +31,7 @@ Note that it is important to export workspaces in the `.cvi42wsx` format. The `.
 
 ### Usage
 #### Normal use
-Place the 'Contour42' project directory in you Matlab path, and open the `contour42.m` file in Matlab. Run the script.
+Place the 'Contour42' project directory in your Matlab path, and open the `contour42.m` file in Matlab. Run the script.
 
 When prompted by the GUI, select a main working directory containing the following subdirectories (adhere strictly to the naming scheme):
 - workspaces (directory containing your workspaces, e.g. study_1, study_2...)
