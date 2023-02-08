@@ -71,3 +71,12 @@ Open a new terminal and navigate to the 'parse_cvi_xml' subdirectory in the main
 Run the script in the terminal by executing `python parse_cvi42_xml.py xml_path output_path`.
 - `xml_path` is the path to the cvi42 xml file. For example: `/Users/Username/Desktop/Folder/workspace.cvi42wsx`.
 - `output_path` is the path where the produced .mat files will be saved. For example: `/Users/Username/Desktop/Folder/Output`.
+
+### Output
+#### Normal use
+- `contours/ID_*/<SeriesName>/<SeriesName> [Contour Polygons].mat`
+   
+   sdf
+
+   
+- `contours/ID_*/<SeriesName>/<SeriesName> [Contour Masks].mat`
