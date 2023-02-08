@@ -34,6 +34,29 @@ Note that it is important to export workspaces in the `.cvi42wsx` format. The `.
 Place the 'Contour42' project directory in your Matlab path, and open the `contour42.m` file in Matlab. Run the script.
 
 When prompted by the GUI, select a main working directory containing the following subdirectories (adhere strictly to the naming scheme):
+
+```text
+ Main folder
+  │
+  ├── workspaces
+  │   ├── ID_1
+  │   ├── ID_2
+  │   └── ID_N
+  │
+  └── dicom
+      ├── ID_1
+      │      ├── Series_1
+      │      ├── Series_2
+      │      └── Series_N
+      ├── ID_2
+      │      ├── Series_1
+      │      ├── Series_2
+      │      └── Series_N
+      └── ID_N
+             ├── ...
+             ...
+```
+
 - workspaces (directory containing your workspaces, e.g. study_1, study_2...)
 - dicom (directory containing subdirectories, e.g.: study_1, study_2... Each subdirectory contains further subdirectories for each series for which we want to extract contours)
 

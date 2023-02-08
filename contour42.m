@@ -8,8 +8,8 @@
 % After running this script the following two scripts provide additional 
 % functionality ans must be called independently:
 %  - contour42_view.m enables viewing of the generated contour masks.
-%  - contour42_curves.m can generate curves from dynamic data (such as 
-%    pefusion of flow) using the generated contour masks.
+%  - curves42_QP.m can generate curves from dynamic Quantitative Perfusion
+%    data using the generated contour masks.
 
 % The script expects a folder stucture containing the exported cvi42 
 % workspaces and dicom image data that follows the below pattern:
