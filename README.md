@@ -36,7 +36,7 @@ Place the 'Contour42' project directory in your Matlab path, and open the `conto
 When prompted by the GUI, select a main working directory containing the following subdirectories (adhere strictly to the naming scheme):
 
 ```text
- Main folder
+ Main directory
   │
   ├── workspaces
   │   ├── ID_1

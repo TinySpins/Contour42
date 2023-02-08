@@ -14,7 +14,7 @@
 % The script expects a folder stucture containing the exported cvi42 
 % workspaces and dicom image data that follows the below pattern:
 %
-% Main folder
+% Main directory
 %  │
 %  ├── workspaces
 %  │   ├── ID_1
