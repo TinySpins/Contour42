@@ -22,7 +22,6 @@ Note that the Python component of this tool is a fork of another project, and is
 - scipy
 #### Required Matlab FEX packages
 - [Natural-Order Filename Sort](https://se.mathworks.com/matlabcentral/fileexchange/47434-natural-order-filename-sort) (Version 3.4.4)
-- [imtool3D](https://se.mathworks.com/matlabcentral/fileexchange/74761-imtool3d_td) (Version 1.0.4)
 #### How to export a Circle cvi42 XML workspace
 Open cvi42. Open a study. If there are no contours defined for any of the series in the study, draw some contours, then save the workspace.
 To export the workspace as XML, click on 'Workspace' in the top menu, select 'Export Workspace' in the drop down menu. Fill in a proper name for the workspace. In the 'Save as type:' field, select `Cvi42 XML Workspace (*.cvi42wsx)`. Click 'Save'.
