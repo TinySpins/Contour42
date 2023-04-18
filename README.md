@@ -14,7 +14,7 @@ Note that the Python component of this tool is a fork of another project, and is
 
 
 ### Prerequisites
-- An exported Circle cvi42 workspace XML with file extension `.cvi42wsx
+- An exported Circle cvi42 workspace XML with file extension `.cvi42wsx`
 - Matlab (requires Matlab R2022b or newer)
 - Python 3 (tested with Python 3.7.7)
 #### Required Python packages
