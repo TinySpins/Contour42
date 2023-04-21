@@ -5,11 +5,9 @@
 % The tool uses exported cvi42 workspaces to extract the contours into 
 % .mat format.
 
-% After running this script the following two scripts provide additional 
+% After running this script the following scripts provide additional 
 % functionality ans must be called independently:
 %  - contour42_view.m enables viewing of the generated contour masks.
-%  - curves42_QP.m can generate curves from dynamic Quantitative Perfusion
-%    data using the generated contour masks.
 
 % The script expects a folder stucture containing the exported cvi42 
 % workspaces and dicom image data that follows the below pattern:
@@ -34,11 +32,10 @@
 %             ├── ...
 %             ...
 %
-% There must be the same number of ID/patient folders in the workspaces 
+% There must be the same number of 'ID' folders in the workspaces 
 % and dicom folders. The study folders and workspaces must be named ID_...
 % The workspace corresponding to a given study directory must have the same
 % name for sorting purposes, e.g. workspaces/ID_1.cvi42wsx and dicom/ID_1.
-
 
 % House cleaning
 clear all; close all; clc;
