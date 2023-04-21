@@ -1,3 +1,6 @@
 [submodule "parse_cvi_xml"]
 	path = parse_cvi_xml
 	url = https://github.com/TinySpins/parse_cvi_xml.git
+[submodule "utils"]
+	path = utils
+	url = https://github.com/TinySpins/Matlab_Public.git
