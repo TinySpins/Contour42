@@ -130,3 +130,7 @@ dmypy.json
 
 # macOC
 .DS_Store
+
+# Matlab
+# Windows default autosave extension
+*.asv
