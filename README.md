@@ -88,4 +88,4 @@ Run the script in the terminal by executing `python parse_cvi42_xml.py xml_path 
 Masks produced from the output contour polygons can be viewed by utilizing the `contour42_view.m` script.
 
 Open the `contour42_view.m` script in Matlab and run it. Select a folder containing one of the output `<SeriesName> [Contour Masks].mat` files.
-The imtools3D viewer opens, and displays the contour masks overlaid on the corresponding dicom image files.
+The imtools3D viewer opens, and displays the contour masks overlaid on the corresponding dicom image files. Note that RV Insertion and Myocardial Center reference point locations are roughly indicated using single-pixel masks.
