@@ -128,9 +128,12 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# macOC
+# macOS
 .DS_Store
 
 # Matlab
 # Windows default autosave extension
 *.asv
+
+# Old files
+*.old
